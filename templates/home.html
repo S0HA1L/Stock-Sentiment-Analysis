@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            /* box-sizing: border-box; */
+        }
+
+        body {
+            font-family: Arial, Tahoma, Serif;
+            color: #263238;
+            background-image: url("..\images\stock_up_down.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: contain;
+
+            /* place-items: center; */
+            /* min-height: 100vh; */
+            /* overflow: hidden; */
+        }
+
+        nav {
+            /* display: flex; */
+            /* 1 */
+            justify-content: space-between;
+            /* 2 */
+            padding: 1rem 2rem;
+            /* 3 */
+            background: #d9e4e9;
+            /* 4 */
+        }
+
+
+
+
+
+        div {
+            /* width: 500px;
+            height: 200px;
+            background: rgb(201, 164, 164);
+            text-align: center; */
+            width: 300px;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            margin: 30px auto;
+            /* margin-top: 10px; */
+            background: rgba(214, 237, 248, 0.9);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+
+        }
+
+        form {
+            text-align: center;
+            line-height: 20px;
+
+
+        }
+
+        form p {
+            margin-top: 10px;
+            margin-bottom: 50px;
+
+        }
+
+        form input {
+            margin-top: 50px;
+
+        }
+
+        textarea {
+            width: 265px;
+            height: 101px;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: Arial, Tahoma, Serif;
+            color: #263238;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h2><a href="#"> Stock Price Prediction</a></h2>
+    </nav>
+    <div class="containers">
+        <form action="{{ url_for('predict') }}" , method="POST">
+            <p>Enter the News Headlines: </p>
+            <textarea type="text" name="message" placeholder="Enter the News Headline"
+                required="required"></textarea><br>
+            <input type="submit" name="submit">
+
+        </form>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
